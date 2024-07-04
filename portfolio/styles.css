@@ -10,6 +10,10 @@ body {
     line-height: 1.6;
     color: white;
     cursor: default;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 button,
@@ -31,7 +35,7 @@ a {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(#1b3f57, #0f0e3b);
-    padding: 120px 0;
+    padding-top: 100px;
 }
 
 .content h2 {
@@ -62,7 +66,7 @@ header {
     position: absolute;
     top: 28%;
     left: 25%;
-    z-index: 100;
+    z-index: 1;
     max-width: 100%;
 }
 
@@ -137,7 +141,10 @@ header {
     display: flex;
     justify-content: center;
     gap: 40px;
-    background: linear-gradient(rgb(135, 165, 242), rgba(135, 165, 242, 0.1));
+    background: linear-gradient(
+        rgba(135, 165, 242, 0.8),
+        rgba(135, 165, 242, 0.1)
+    );
     padding: 40px 20px;
     border-radius: 10px;
     margin-top: 0;
@@ -145,7 +152,7 @@ header {
 }
 
 .vertical-line {
-    width: 3px;
+    width: 2px;
     height: auto;
     background-color: white;
 }
@@ -206,7 +213,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 }
 
 .over-mij-content {
@@ -285,6 +292,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 .contact-items {
@@ -303,4 +311,24 @@ header {
 
 .contact-item img:hover {
     transform: translateY(5px);
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer img {
+    position: absolute;
+    width: 100%;
+}
+
+footer p {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 80px;
 }
