@@ -6,14 +6,17 @@
 
 body {
     font-family: "Inter", sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
     color: white;
     cursor: default;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 button,
@@ -40,7 +43,7 @@ a {
 
 .content h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 2.25rem;
     margin-bottom: 20px;
 }
 
@@ -62,20 +65,31 @@ header {
     width: 25px;
 }
 
-.header-text {
+/* .header-text {
     position: absolute;
     top: 28%;
     left: 25%;
     z-index: 1;
     max-width: 100%;
+} */
+
+.header-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    max-width: 100%;
+    text-align: center;
 }
 
 .header-text h1 {
-    font-size: 40px;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .header-text h2 {
-    font-size: 24px;
+    font-size: 1.75rem;
     font-weight: 500;
 }
 
@@ -94,7 +108,7 @@ header {
 .nav-bar li {
     list-style: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     transition: transform 0.2s ease;
 }
@@ -104,8 +118,8 @@ header {
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: 700;
+    font-size: 1.75rem;
 }
 
 .trees-image-container {
@@ -150,7 +164,7 @@ header {
 }
 
 .vertical-line {
-    width: 2px;
+    width: 2.5px;
     height: auto;
     background-color: white;
 }
@@ -170,13 +184,13 @@ header {
 }
 
 .project-text h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1;
     margin-bottom: 20px;
 }
 
 .project-text h4 {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-top: 20px;
 }
 
@@ -196,7 +210,7 @@ header {
     cursor: pointer;
     transition: background-color 0.2s ease;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .project-buttons button:hover {
@@ -232,7 +246,7 @@ header {
 }
 
 #over-mij h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
@@ -348,10 +362,7 @@ footer p {
 @media (max-width: 768px) {
     .header-text {
         top: 40%;
-        left: 50%;
-        transform: translate(-50%);
         text-wrap: nowrap;
-        text-align: center;
     }
 
     .nav-bar {
@@ -423,6 +434,28 @@ footer p {
 
     #contact {
         margin-bottom: -200px;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .header-text h1 {
+        font-size: 2.75rem;
+        margin-bottom: 10px;
+    }
+
+    .header-text h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .project-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .section-title h2 {
+        margin: 0 10px;
     }
 }
 
