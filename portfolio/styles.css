@@ -35,7 +35,7 @@ a {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(#1b3f57, #0f0e3b);
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .content h2 {
@@ -88,6 +88,7 @@ header {
 .nav-bar ul {
     display: flex;
     gap: 80px;
+    z-index: 2;
 }
 
 .nav-bar li {
@@ -108,23 +109,19 @@ header {
 }
 
 .trees-image-container {
-    position: relative;
+    position: absolute;
+    height: 100%;
     width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
 }
 
 .trees-image-container img {
     width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.trees-image-container img:nth-child(2) {
-    top: 270px;
-}
-
-.trees-image-container img:first-child {
-    top: 240px;
 }
 
 #projecten {
@@ -135,7 +132,8 @@ header {
     margin-bottom: 50px;
 }
 
-.project {
+.project-left,
+.project-right {
     width: 80%;
     max-width: 100%;
     display: flex;
@@ -157,7 +155,8 @@ header {
     background-color: white;
 }
 
-.project img {
+.project-left img,
+.project-right img {
     width: 45%;
     box-shadow: 5px -5px 10px rgba(43, 43, 43, 0.2);
 }
@@ -167,6 +166,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .project-text h3 {
@@ -238,16 +238,18 @@ header {
 
 .skills-container {
     width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
     padding: 20px 40px 40px 40px;
-    gap: 10px;
     background-color: rgba(135, 165, 242, 0.2);
     border-radius: 10px;
+    align-items: end;
 }
 
-.skill-logo {
+.skill {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,15 +257,15 @@ header {
     font-weight: 600;
 }
 
-.skill-logo img {
+.skill img {
     transition: transform 0.3s ease;
 }
 
-.skill-logo img:hover {
+.skill img:hover {
     transform: translateY(-10px);
 }
 
-.skill-logo img {
+.skill img {
     width: 80px;
 }
 
@@ -293,6 +295,7 @@ header {
     flex-direction: column;
     align-items: center;
     z-index: 1;
+    margin-bottom: -150px;
 }
 
 .contact-items {
@@ -316,10 +319,12 @@ header {
 footer {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    overflow: hidden;
+    z-index: 2;
 }
 
 footer img {
@@ -331,4 +336,107 @@ footer p {
     position: relative;
     z-index: 1;
     margin-bottom: 80px;
+}
+
+@media (max-width: 992px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-text {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+        text-wrap: nowrap;
+        text-align: center;
+    }
+
+    .nav-bar {
+        align-items: flex-start;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .scroll-down {
+        bottom: 20px;
+    }
+
+    #over-mij {
+        margin-bottom: 50px;
+    }
+
+    .over-mij-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .over-mij-content img {
+        width: 100%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .project-left,
+    .project-right {
+        gap: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .project-left {
+        flex-direction: column-reverse;
+    }
+
+    .project-right {
+        flex-direction: column;
+    }
+
+    .vertical-line {
+        width: auto;
+        height: 2px;
+        background-color: white;
+    }
+
+    .project-left img,
+    .project-right img {
+        width: 100%;
+    }
+
+    .project-info {
+        width: 100%;
+    }
+
+    .trees-image-container img,
+    footer img {
+        width: 200%;
+    }
+
+    #contact {
+        margin-bottom: -200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trees-image-container img,
+    footer img {
+        width: 250%;
+    }
+
+    #contact {
+        margin-bottom: -300px;
+    }
+
+    footer p {
+        margin-bottom: 40px;
+    }
 }
