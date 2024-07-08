@@ -7,3 +7,9 @@ function smoothScroll(target) {
         });
     }
 }
+
+window.addEventListener("scroll", function () {
+    const scrolled = window.scrollY;
+    const background = document.querySelector(".background-trees");
+    background.style.transform = `translateY(${scrolled * 0.2}px)`;
+});
