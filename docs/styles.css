@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overscroll-behavior: none;
 }
 
 p {
@@ -155,9 +156,13 @@ header {
     margin-bottom: 40px;
 }
 
+.project-image-container {
+    width: 50%;
+}
+
 .project-left img,
 .project-right img {
-    width: 50%;
+    width: 100%;
     box-shadow: 5px -5px 10px rgba(43, 43, 43, 0.2);
 }
 
@@ -178,10 +183,6 @@ header {
 .project-text h3 {
     font-size: 1.75rem;
     line-height: 1;
-    margin-bottom: 20px;
-}
-
-.project-text p {
     margin-bottom: 20px;
 }
 
@@ -221,6 +222,7 @@ header {
     transition: background-color 0.2s ease;
     color: white;
     font-size: 1rem;
+    text-wrap: nowrap;
 }
 
 .project-buttons button:hover {
@@ -228,7 +230,7 @@ header {
 }
 
 .github-logo {
-    max-width: 20px;
+    max-width: 1.125rem;
     margin-left: 10px;
 }
 
@@ -404,7 +406,7 @@ footer p {
     }
 
     .over-mij-content img {
-        width: 100%;
+        width: 85%;
     }
 
     .skills-container {
@@ -440,9 +442,8 @@ footer p {
         font-size: 0.875rem;
     }
 
-    .github-logo {
-        max-width: 15px;
-        margin-left: 10px;
+    .project-image-container {
+        width: 100%;
     }
 
     #contact {
