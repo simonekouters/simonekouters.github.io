@@ -22,7 +22,7 @@ p {
 
 button,
 li,
-.logo,
+#logo,
 img {
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -34,7 +34,7 @@ a {
     color: white;
 }
 
-.content {
+#content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +42,7 @@ a {
     padding-top: 60px;
 }
 
-.content h2 {
+#content h2 {
     text-align: center;
     font-size: 2.25rem;
     margin-bottom: 20px;
@@ -53,7 +53,7 @@ header {
     height: 100vh;
 }
 
-.scroll-down {
+#scroll-down {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -62,11 +62,11 @@ header {
     cursor: pointer;
 }
 
-.scroll-down img {
+#scroll-down img {
     width: 25px;
 }
 
-.header-text {
+#header-text {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -76,29 +76,29 @@ header {
     text-align: center;
 }
 
-.header-text h1 {
+#header-text h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.header-text h2 {
+#header-text h2 {
     font-size: 1.75rem;
     font-weight: 500;
 }
 
-.nav-bar {
+#nav-bar {
     display: flex;
     justify-content: space-between;
     padding: 30px 40px;
 }
 
-.nav-bar ul {
+#nav-bar ul {
     display: flex;
     gap: 80px;
     z-index: 2;
 }
 
-.nav-bar li {
+#nav-bar li {
     list-style: none;
     cursor: pointer;
     font-size: 1.25rem;
@@ -106,17 +106,17 @@ header {
     transition: 200ms ease;
 }
 
-.nav-bar li:hover {
+#nav-bar li:hover {
     text-shadow: #ffffff 1px 0 15px;
 }
 
-.logo {
+#logo {
     width: 50px;
     z-index: 10;
     transition: 200ms ease;
 }
 
-.trees-image-container {
+#trees-image-container {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -127,7 +127,7 @@ header {
     overflow: hidden;
 }
 
-.trees-image-container img {
+#trees-image-container img {
     width: 100%;
     position: absolute;
 }
@@ -242,7 +242,7 @@ header {
     margin-bottom: 90px;
 }
 
-.over-mij-content {
+#over-mij-content {
     width: 80%;
     display: flex;
     align-items: center;
@@ -250,7 +250,7 @@ header {
     margin-bottom: 40px;
 }
 
-.over-mij-content img {
+#over-mij-content img {
     padding: 10px;
     border-radius: 100%;
     border: 3px solid white;
@@ -262,7 +262,7 @@ header {
     margin-bottom: 30px;
 }
 
-.skills-container {
+#skills-container {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -324,7 +324,7 @@ header {
     margin-bottom: -150px;
 }
 
-.contact-items {
+#contact-items {
     display: flex;
     gap: 30px;
 }
@@ -365,34 +365,34 @@ footer p {
 }
 
 @media (max-width: 992px) {
-    .skills-container {
+    #skills-container {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 }
 
 @media (max-width: 768px) {
-    .trees-image-container img,
+    #trees-image-container img,
     footer img {
         width: 200%;
     }
 
-    .header-text {
+    #header-text {
         top: 40%;
         text-wrap: nowrap;
     }
 
-    .nav-bar {
+    #nav-bar {
         align-items: flex-start;
     }
 
-    .nav-bar ul {
+    #nav-bar ul {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
 
-    .scroll-down {
+    #scroll-down {
         bottom: 20px;
     }
 
@@ -400,16 +400,16 @@ footer p {
         margin-bottom: 50px;
     }
 
-    .over-mij-content {
+    #over-mij-content {
         flex-direction: column;
         gap: 30px;
     }
 
-    .over-mij-content img {
+    #over-mij-content img {
         width: 85%;
     }
 
-    .skills-container {
+    #skills-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
@@ -450,16 +450,16 @@ footer p {
         margin-bottom: -200px;
     }
 
-    .content h2 {
+    #content h2 {
         font-size: 2rem;
     }
 
-    .header-text h1 {
+    #header-text h1 {
         font-size: 2.75rem;
         margin-bottom: 10px;
     }
 
-    .header-text h2 {
+    #header-text h2 {
         font-size: 1.5rem;
         font-weight: 500;
     }
@@ -474,7 +474,7 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    .trees-image-container img,
+    #trees-image-container img,
     footer img {
         width: 250%;
     }
