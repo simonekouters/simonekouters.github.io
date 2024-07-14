@@ -38,7 +38,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(#1b3f57, #0f0e3b);
+    background: linear-gradient(#152f41, #0e1136);
     padding-top: 60px;
 }
 
@@ -49,7 +49,7 @@ a {
 }
 
 header {
-    background: linear-gradient(#87a5f2, #ff8faf 80%);
+    background: linear-gradient(#789eff, #ff8faf 80%);
     height: 100vh;
 }
 
@@ -147,8 +147,8 @@ header {
     display: flex;
     justify-content: space-between;
     background: linear-gradient(
-        rgba(135, 165, 242, 0.8),
-        rgba(135, 165, 242, 0.1)
+        rgba(120, 158, 255, 0.8),
+        rgba(14, 17, 54, 0.1)
     );
     padding: 30px;
     border-radius: 10px;
@@ -160,8 +160,7 @@ header {
     width: 50%;
 }
 
-.project-left img,
-.project-right img {
+.project-image {
     width: 100%;
     box-shadow: 5px -5px 10px rgba(43, 43, 43, 0.2);
 }
@@ -200,7 +199,7 @@ header {
 
 .project-tools h4 {
     padding: 5px 10px;
-    background-color: #87a5f2;
+    background-color: #789eff;
     border-radius: 50px;
     text-wrap: nowrap;
 }
@@ -255,6 +254,7 @@ header {
     border-radius: 100%;
     border: 3px solid white;
     width: 23%;
+    min-width: 250px;
 }
 
 #over-mij h3 {
@@ -270,7 +270,7 @@ header {
     grid-column-gap: 10px;
     grid-row-gap: 30px;
     padding: 20px 40px 40px 40px;
-    background-color: rgba(135, 165, 242, 0.2);
+    background-color: rgba(120, 158, 255, 0.2);
     border-radius: 10px;
     align-items: end;
 }
@@ -429,8 +429,7 @@ footer p {
         flex-direction: column;
     }
 
-    .project-left img,
-    .project-right img {
+    .project-image {
         width: 100%;
     }
 

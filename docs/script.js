@@ -10,6 +10,9 @@ function smoothScroll(target) {
 
 window.addEventListener("scroll", function () {
     const scrolled = window.scrollY;
-    const background = document.querySelector(".background-trees");
-    background.style.transform = `translateY(${scrolled * 0.2}px)`;
+    const backgroundTrees = document.querySelector("#background-trees");
+    backgroundTrees.style.transform = `translateY(${scrolled * 0.3}px)`;
+
+    const middleTrees = document.querySelector("#middle-trees");
+    middleTrees.style.transform = `translateY(${scrolled * 0.15}px)`;
 });
