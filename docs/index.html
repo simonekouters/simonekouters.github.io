@@ -24,7 +24,7 @@
                     <li><a onclick="smoothScroll('#contact')">contact</a></li>
                 </ul>
             </nav>
-            <div id="header-text">
+            <div id="header-text" class="hidden">
                 <h1>Simone Kouters</h1>
                 <h2>&#123; Full-stack Developer &#125;</h2>
             </div>
@@ -36,7 +36,7 @@
                     alt="bomen"
                 />
                 <img id="middle-trees" src="images/trees-2.png" alt="bomen" />
-                <img src="images/trees-1.png" alt="bomen" />
+                <img id="front-trees" src="images/trees-1.png" alt="bomen" />
             </div>
 
             <a id="scroll-down" onclick="smoothScroll('#projecten')"
@@ -52,7 +52,7 @@
                     <div class="line-right"></div>
                 </div>
 
-                <div class="project-left">
+                <div class="project project-left hidden">
                     <div class="project-image-container">
                         <img
                             class="project-image"
@@ -108,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="project-right">
+                <div class="project project-right hidden">
                     <div class="project-info">
                         <div class="project-text">
                             <div class="project-title">
@@ -163,7 +163,7 @@
                     </div>
                 </div>
 
-                <div class="project-left">
+                <div class="project project-left hidden">
                     <div class="project-image-container">
                         <img
                             class="project-image"
@@ -225,7 +225,7 @@
                     <h2>Over mij</h2>
                     <div class="line-right"></div>
                 </div>
-                <div id="over-mij-content">
+                <div id="over-mij-content" class="hidden">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
@@ -246,36 +246,36 @@
                 </div>
                 <h3>Technische skills</h3>
                 <div id="skills-container">
-                    <div class="skill">
+                    <div class="skill hidden">
                         <img src="images/icons/java.png" alt="java logo" />
                         <p>Java</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill hidden">
                         <img
                             src="images/icons/springboot.png"
                             alt="spring boot logo"
                         />
                         <p>Spring Boot</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill hidden">
                         <img src="images/icons/react.png" alt="react logo" />
                         <p>ReactJS</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill hidden">
                         <img
                             src="images/icons/tailwind.png"
                             alt="tailwind logo"
                         />
                         <p>TailwindCSS</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill hidden">
                         <img
                             src="images/icons/javascript.png"
                             alt="javascript logo"
                         />
                         <p>Javascript</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill hidden">
                         <img src="images/icons/docker.png" alt="docker logo" />
                         <p>Docker</p>
                     </div>
@@ -290,14 +290,14 @@
                 </div>
                 <div id="contact-items">
                     <a
-                        class="contact-item"
+                        class="contact-item hidden"
                         href="mailto:s.kouters&#64;xs4all&#46;nl"
                     >
                         <img src="images/icons/email.png" alt="email icoon" />
                     </a>
 
                     <a
-                        class="contact-item"
+                        class="contact-item hidden"
                         href="https://www.linkedin.com/in/simone-kouters/?originalSubdomain=nl"
                         target="_blank"
                     >
@@ -308,7 +308,7 @@
                     </a>
 
                     <a
-                        class="contact-item"
+                        class="contact-item hidden"
                         href="https://github.com/simonekouters"
                         target="_blank"
                     >
@@ -322,6 +322,6 @@
                 <p>&copy; 2024 Simone Kouters</p>
             </footer>
         </div>
-        <script src="script.js"></script>
+        <script defer src="script.js"></script>
     </body>
 </html>

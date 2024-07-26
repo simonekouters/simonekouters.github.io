@@ -15,6 +15,17 @@ body {
     overscroll-behavior: none;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 1s, transform 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 p {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -127,6 +138,11 @@ header {
     overflow: hidden;
 }
 
+#background-trees,
+#middle-trees {
+    transition: transform 0.2s ease;
+}
+
 #trees-image-container img {
     width: 100%;
     position: absolute;
@@ -140,6 +156,14 @@ header {
     margin-bottom: 50px;
 }
 
+.project:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.project:nth-child(3) {
+    transition-delay: 400ms;
+}
+
 .project-left,
 .project-right {
     width: 80%;
@@ -147,8 +171,8 @@ header {
     display: flex;
     justify-content: space-between;
     background: linear-gradient(
-        rgba(120, 158, 255, 0.8),
-        rgba(14, 17, 54, 0.1)
+        rgba(120, 158, 255, 0.5),
+        rgba(120, 158, 255, 0.1)
     );
     padding: 30px;
     border-radius: 10px;
@@ -270,7 +294,10 @@ header {
     grid-column-gap: 10px;
     grid-row-gap: 30px;
     padding: 20px 40px 40px 40px;
-    background-color: rgba(120, 158, 255, 0.2);
+    background: linear-gradient(
+        rgba(120, 158, 255, 0.3),
+        rgba(120, 158, 255, 0.1)
+    );
     border-radius: 10px;
     align-items: end;
 }
@@ -281,6 +308,26 @@ header {
     align-items: center;
     gap: 20px;
     font-weight: 600;
+}
+
+.skill:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.skill:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.skill:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.skill:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.skill:nth-child(6) {
+    transition-delay: 1000ms;
 }
 
 .skill img {
@@ -333,6 +380,14 @@ header {
     padding: 10px;
 }
 
+.contact-item:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.contact-item:nth-child(3) {
+    transition-delay: 400ms;
+}
+
 .contact-item img {
     width: 30px;
     transition: transform 0.2s;
@@ -362,6 +417,12 @@ footer p {
     position: relative;
     z-index: 1;
     margin-bottom: 80px;
+}
+
+@media (min-width: 1600px) {
+    footer {
+        height: 800px;
+    }
 }
 
 @media (max-width: 992px) {

@@ -16,3 +16,16 @@ window.addEventListener("scroll", function () {
     const middleTrees = document.querySelector("#middle-trees");
     middleTrees.style.transform = `translateY(${scrolled * 0.15}px)`;
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
